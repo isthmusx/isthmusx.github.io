@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title> John Paul Al-haddi</title>
-    <link rel="stylesheet" type="text/css" href="https://github.com/isthmusx/isthmusx.github.io/main/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,16 +12,19 @@
   <body>
     
     <div class= divNav>
-      <nav class= "navbar">
-        <img class="logo" src="logo.png">
+      <nav class= "navbar" id="navActive">
+        <!--<img class="logo" src="logo.png">-->
         <ul>
-          <li> <a id="active" href="#">Home</a> </li>
-          <li> <a href="#">About</a> </li>
-          <li> <a href="#">Projects</a> </li>
-          <li> <a href="#">Contact</a> </li>
+          <li> <a id="active" href="#home" class="btn active">/Home</a> </li>
+          <li> <a href="#about" class="btn">/About</a> </li>
+          <li> <a href="#projects" class="btn">/Projects</a> </li>
+          <li> <a href="#contact" class="btn">/Contact</a> </li>
         </ul>
       </nav>
     </div>
+    
+    <div id="home">
+    
     
     
     <h1 class="nameAnim">
@@ -34,6 +37,37 @@
     
     <h3 class="dev">Developer.</h3>
     
+    <div class="mainBtn">
+    <a class="btnLink" href="https://www.youtube.com/watch?v=iik25wqIuFo" target="_blank">Hire Me</a>
+    </div>
+    </div>
+    
+    
+    
+    
+    <div id="about">
+      <div class="aboutMain">
+        <img src="images/aboutpic.jpeg">
+      
+      <div class="aboutContent">
+        <h2>About Me</h2>
+        <h5>BS <span>Computer Science</span> Stundent</h5>
+        <p>I'm John Paul Al-haddi, currently a student. I'm building this webpage to practice my Web Development skill and showcase my knowldge and skills.</p>
+        <h5 id="skills"> My Skills: </h5>
+        <p> <span>Java</span>, <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span> </p>
+        
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="projects">
+      About
+    </div>
+    
+    <div id="contact">
+      About
+    </div>
     
     
     <script type="text/javascript" src="script.js"></script>
