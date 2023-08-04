@@ -18,7 +18,7 @@ body {
   background-color: #ecf1fd;
   opacity: 0.2;
   background-size: 20% 20%;
-  background-image: repeating-linear-gradient(to right, #ff023f, #ff023f 1px, #ecf1fd 1px, #ecf1fd);
+  background-image: repeating-linear-gradient(to right, #ff023f, #ff023f 1px, #ecf1fd 1px, #ecf1fd);  
   z-index: -1; 
 }
 
