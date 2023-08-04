@@ -194,26 +194,11 @@ nav ul li a:hover {
   color: #3f4256;
 }
 
-.picture {
-  display: flex;
-  justify-content: right; 
-  align-items: center; 
-}
-
-.picture img {
-  max-width: 500px;
-  height: auto;
-  position: absolute;
-  top: 25%; 
-  right: 10%; 
-  z-index: 0;
-}
-
 .scroll-down{
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: 20px; /* Adjust margin for spacing */
+  margin: 20px; 
   padding: 10px;
 }
 
@@ -230,10 +215,54 @@ nav ul li a:hover {
 }
 
 /* about*/
+
 #about {
-  height: 700px;
-  width: 100%;
-  margin-top: 50px;
-  padding: 100px 0;
-  background-color: grey;
+  padding: 0;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fff;
 }
+
+.centered-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  margin: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.picture img {
+  max-width: 300px;
+  height: auto;
+}
+
+.aboutMe {
+  text-align: left;
+  width: 80%; /* Increase the width to make the box wider */
+  padding-left: 10%;
+}
+
+.aboutMe h3 {
+  color: #ff023f;
+  font-size: 2rem; /* Adjust as needed */
+}
+
+.aboutMe h5 {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #3f4256;
+  line-height: 25px; 
+}
+
+.mainBtn {
+  margin: 80px 0 0 -20px;
+}
+
+
