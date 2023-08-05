@@ -10,7 +10,7 @@ body {
   padding: 0;
 }
 .background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -91,6 +91,8 @@ nav ul li a {
 nav ul li a:hover {
   color: #ff023f;
 }
+
+/* home */
 
 #home {
   padding: 0;
@@ -197,9 +199,11 @@ nav ul li a:hover {
 .scroll-down{
   position: absolute;
   bottom: 0;
-  right: 0;
-  margin: 20px; 
+  right: 0; 
+  margin: 20px;
   padding: 10px;
+  white-space: nowrap;
+  
 }
 
 .scroll-down p {
@@ -219,23 +223,20 @@ nav ul li a:hover {
 #about {
   padding: 0;
   display: flex;
-  align-items: center; 
-  justify-content: center; 
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   background-color: #fff;
 }
 
-.centered-container {
+.flex-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.box {
-  margin: 10%;
-  display: flex;
-  align-items: center;
+.picture {
+  padding: 0 10% 0 20%;
 }
 
 .picture img {
@@ -245,13 +246,13 @@ nav ul li a:hover {
 
 .aboutMe {
   text-align: left;
-  width: 80%; /* Increase the width to make the box wider */
-  padding-left: 10%;
+  width: 40%;
+  margin: -2.5% 0 0 -5%;
 }
 
 .aboutMe h3 {
   color: #ff023f;
-  font-size: 2rem; /* Adjust as needed */
+  font-size: 2rem;
 }
 
 .aboutMe h5 {
@@ -265,4 +266,12 @@ nav ul li a:hover {
   margin: 80px 0 0 -20px;
 }
 
+/* expertise */
 
+#expertise {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
