@@ -4,10 +4,27 @@ html {
   overflow-x: hidden;
 }
 
+:root {
+  --primary-color: #3f4256;
+  --secondary-color: #7b7e95;
+  --accent-color: #ff023f;
+  --light-color: #ecf1fd;
+  --white-color: #ffffff;
+}
+
+.dark-theme {
+  --primary-color: #FBFCFF;
+  --secondary-color: #e5e5e5;
+  --accent-color: #ff023f;
+  --light-color: #121212;
+  --white-color: #1e1e1e;
+}
+
 body {
   font-family: 'Work Sans', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: var(--light-color);
 }
 .background {
   position: fixed;
@@ -15,10 +32,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ecf1fd;
-  opacity: 0.2;
+  background-color: var(--light-color);
+  opacity: .2;
   background-size: 20% 20%;
-  background-image: repeating-linear-gradient(to right, #ff023f, #ff023f 1px, #ecf1fd 1px, #ecf1fd);  
+  background-image: repeating-linear-gradient(to right, var(--accent-color), var(--accent-color) 1px, var(--light-color) 1px, var(--light-color));  
   z-index: -1; 
 }
 
@@ -56,7 +73,7 @@ nav {
 
 .logo-text {
   font-weight: bold;
-  color: #ff023f;
+  color: var(--accent-color);
   font-size: 1.8rem; 
 }
 
@@ -77,19 +94,26 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-weight: 500;
-  color: #7b7e95;
+  color: var(--secondary-color);
   font-size: small;
   letter-spacing: 0.1em;
 }
 
 
 .active {
-  color: #ff023f;
+  color: var(--accent-color);
   pointer-events: none;
 }
 
 nav ul li a:hover {
-  color: #ff023f;
+  color: var(--accent-color);
+}
+
+#modeIcon {
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-right: 2%;
+  color: var(--primary-color);
 }
 
 /* home */
@@ -115,27 +139,27 @@ nav ul li a:hover {
   letter-spacing: 0.2em;
   font-weight: 600;
   margin-bottom: -75px;
-  color: #3f4256;
+  color: var(--primary-color);
 }
 
 .intro h3 {
   font-size: 6rem;
   margin-bottom: -10px;
   margin-left: -5px;
-  color: #3f4256;
+  color: var(--primary-color);
 }
 
 .intro h5 {
   font-weight: 400;
   font-size: 1rem;
-  color: #3f4256;
+  color: var(--primary-color);
   line-height: 25px; 
   padding-bottom: 50px;
   width: 65%;
 }
 
 .intro span {
-  color: #ff023f;
+  color: var(--accent-color);
 }
 
 .mainBtn{
@@ -146,9 +170,9 @@ nav ul li a:hover {
 
 .btnLink {
   text-decoration: none;
-  color: #ecf1fd;
-  background-color: #ff023f;
-  border-color: #ff023f;
+  color: var(--light-color);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
   border-style: solid;
   border-width: 1px;
   padding: 10px 30px;
@@ -161,8 +185,8 @@ nav ul li a:hover {
 
 .btn2Link {
   text-decoration: none;
-  color: #3f4256;
-  border-color: #ff023f;
+  color: var(--primary-color);
+  border-color: var(--accent-color);
   border-style: solid;
   border-width: 1px;
   padding: 10px 30px;
@@ -174,7 +198,7 @@ nav ul li a:hover {
 }
 
 .btnLink:hover {
-  color: rgba(255, 255, 255, 1);
+  color: var(--light-color);
   box-shadow: 0 0 30px rgba(255, 2, 63, .5);
 }
 
@@ -193,7 +217,7 @@ nav ul li a:hover {
 .fa-brands {
   font-size: 24px;
   margin: 1rem;
-  color: #3f4256;
+  color: var(--primary-color);
 }
 
 .scroll-down{
@@ -210,7 +234,7 @@ nav ul li a:hover {
   font-size: small;
   letter-spacing: 0.2em;
   font-weight: 600;
-  color: #3f4256;
+  color: var(--primary-color);
   writing-mode: vertical-lr;
 }
 
@@ -226,7 +250,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #fff;
+  background-color: var(--white-color);
 }
 
 .flex-container {
@@ -251,14 +275,14 @@ nav ul li a:hover {
 }
 
 .aboutMe h3 {
-  color: #ff023f;
+  color: var(--accent-color);
   font-size: 2rem;
 }
 
 .aboutMe h5 {
   font-weight: 400;
   font-size: 1rem;
-  color: #3f4256;
+  color: var(--primary-color);
   line-height: 25px; 
 }
 
@@ -269,6 +293,27 @@ nav ul li a:hover {
 /* expertise */
 
 #expertise {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* projects */
+
+#projects {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--white-color);
+}
+
+/* contact */
+
+#contact {
   padding: 0;
   display: flex;
   align-items: center;

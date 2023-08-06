@@ -28,6 +28,19 @@ window.addEventListener('scroll', () => {
   lastScroll = window.scrollY;
 });
 
+var modeIcon = document.getElementById("modeIcon");
+modeIcon.onclick = function() {
+  document.body.classList.toggle("dark-theme");
+  
+  if (document.body.classList.contains("dark-theme")) {
+    modeIcon.classList = "fa-solid fa-sun";
+  } else {
+    modeIcon.classList = "fa-solid fa-moon";
+  }
+};
+
+
+
 // Smooth scroll with offset
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
