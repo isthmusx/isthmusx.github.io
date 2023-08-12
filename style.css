@@ -396,7 +396,7 @@ nav ul li a:hover {
     height: 100vh;
     background-color: var(--secondary-color);
     top: 70px;
-    right: -80%;
+    right: -100%;
     text-align: start;
     display: block;
     transition: all .5s;
