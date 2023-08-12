@@ -84,7 +84,7 @@ nav ul {
   padding: 0;
   justify-content: center;
   flex-grow: 1;
-  
+  align-items: center;
 }
 
 nav ul li {
@@ -293,11 +293,50 @@ nav ul li a:hover {
 /* expertise */
 
 #expertise {
-  padding: 0;
+  padding: 0 5% 0 5%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+
+}
+
+.titleHeader h3 {
+  color: var(--accent-color);
+  font-size: 2rem;
+
+}
+
+.itemHeader h5 {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--primary-color);
+  line-height: 25px; 
+}
+
+.skillsBox{
+  width: 50%; /* Occupy both columns */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / 3; /* Span both columns */
+  grid-row: 2; /* Place in the second row */
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  background-color: var(--white-color);
+  margin-top: 5%;
+}
+
+.skillsBox img {
+  height: 50px;
+  width: auto;
 }
 
 /* projects */
@@ -311,6 +350,8 @@ nav ul li a:hover {
   background-color: var(--white-color);
 }
 
+
+
 /* contact */
 
 #contact {
@@ -320,3 +361,60 @@ nav ul li a:hover {
   justify-content: center;
   height: 100vh;
 }
+
+
+.checkbtn {
+  font-size: 30px;
+  color: var(--accent-color);
+  float: right;
+  line-height: 80px;
+  margin-right: 3%;
+  cursor: pointer;
+  display: none;
+  z-index: 10;
+  position: fixed;
+}
+
+#check{
+  display: none;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width:600px ){
+
+  .checkbtn {
+    display: block;
+    position: fixed;
+    right: 50px;
+  }
+
+
+  nav ul {
+    position: fixed;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    top: 70px;
+    right: -80%;
+    text-align: start;
+    display: block;
+    transition: all .5s;
+  }
+
+  nav ul li a {
+    font-size: 30px;
+    color: var(--light-color);
+  }
+
+  #check:checked ~ ul {
+    right: 10%;
+  }
+
+  #modeIcon {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+}
+

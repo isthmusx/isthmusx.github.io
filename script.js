@@ -7,11 +7,25 @@ var btns = btnContainer.getElementsByClassName("btn");
 // Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
+    
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  var checkbox = document.getElementById("check");
+  var links = document.querySelectorAll("ul li a.btn");
+
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function(event) {
+      checkbox.checked = false; // Uncheck the checkbox
+    });
+  }
+});
+
+
 
 const navbar = document.querySelector('.navbar');
 let lastScroll = 0;
