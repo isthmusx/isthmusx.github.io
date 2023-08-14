@@ -365,10 +365,54 @@ nav ul li a:hover {
 }
 
 
+.checkbtn {
+  font-size: 30px;
+  color: var(--accent-color);
+  float: right;
+  line-height: 80px;
+  margin-right: 3%;
+  cursor: pointer;
+  display: none;
+  z-index: 10;
+  position: fixed;
+}
+
+#check{
+  display: none;
+}
 
 /* RESPONSIVENESS */
 
 @media (max-width:600px ){
+
+  .checkbtn {
+    display: block;
+    position: fixed;
+    right: 50px;
+  }
+
+
+  nav ul {
+    position: fixed;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    top: 70px;
+    right: -100%;
+    text-align: start;
+    display: block;
+    transition: all .5s;
+  }
+
+  nav ul li a {
+    font-size: 30px;
+    color: var(--light-color);
+  }
+
+  #check:checked ~ ul {
+    right: 10%;
+  }
+
 
   .intro {
     text-align: left; 
