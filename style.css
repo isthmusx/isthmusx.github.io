@@ -166,6 +166,7 @@ nav ul li a:hover {
   text-align: left;
   width: 60%; 
   padding-left: 20px; 
+  white-space: nowrap;
 }
 
 .btnLink {
@@ -250,6 +251,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: auto;
   background-color: var(--white-color);
 }
 
@@ -363,58 +365,63 @@ nav ul li a:hover {
 }
 
 
-.checkbtn {
-  font-size: 30px;
-  color: var(--accent-color);
-  float: right;
-  line-height: 80px;
-  margin-right: 3%;
-  cursor: pointer;
-  display: none;
-  z-index: 10;
-  position: fixed;
-}
-
-#check{
-  display: none;
-}
 
 /* RESPONSIVENESS */
 
 @media (max-width:600px ){
 
-  .checkbtn {
-    display: block;
-    position: fixed;
-    right: 50px;
+  .intro {
+    text-align: left; 
+    width: 85%; 
+    padding: 0 0 0 5px;
+    margin-top: -2.5%;
+  }
+  
+  .intro h6 {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    margin-bottom: -60px;
+    color: var(--primary-color);
+  }
+  
+  .intro h3 {
+    font-size: 4.5rem;
+    margin-bottom: -10px;
+    margin-left: -5px;
+    letter-spacing: -2%;
+    color: var(--primary-color);
+  }
+  
+  .intro h5 {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    letter-spacing: 21%;
+    line-height: 25px; 
+    padding-bottom: 30px;
+    width: 90%;
   }
 
+ .mainBtn {
+  margin-left: -30%;
+  display: flex;
+  align-self: center;
+  align-items: center ;
+ }
 
-  nav ul {
-    position: fixed;
-    width: 70%;
-    height: 100vh;
-    background-color: var(--secondary-color);
-    top: 70px;
-    right: -100%;
-    text-align: start;
-    display: block;
-    transition: all .5s;
-  }
+.scroll-down {
+  display: none;
+}
 
-  nav ul li a {
-    font-size: 30px;
-    color: var(--light-color);
-  }
+.socials {
+  position: relative;
+  align-items: start;
+  flex-direction: row;
+  top: 10%;
+  padding-left: 0;
+}
 
-  #check:checked ~ ul {
-    right: 10%;
-  }
-
-  #modeIcon {
-    font-size: 2rem;
-    padding: 10px;
-  }
 
 }
 
